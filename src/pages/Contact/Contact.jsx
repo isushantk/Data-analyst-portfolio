@@ -1,7 +1,9 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 const Contact = () => {
+    const form = useRef();
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -9,6 +11,8 @@ const Contact = () => {
     });
     const [errors, setErrors] = useState({});
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
+    const [submitError, setSubmitError] = useState('');
 
     const validateEmail = (email) => {
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -53,17 +57,34 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        setSubmitError('');
 
         if (validateForm()) {
-            // In a real app, you would send this to a backend
-            console.log('Form submitted:', formData);
-            setIsSubmitted(true);
-            setFormData({ name: '', email: '', message: '' });
+            setIsLoading(true);
 
-            // Reset success message after 5 seconds
-            setTimeout(() => {
-                setIsSubmitted(false);
-            }, 5000);
+            // EmailJS configuration
+            // You need to replace these with your actual EmailJS credentials
+            const serviceId = 'YOUR_SERVICE_ID';  // Replace with your EmailJS service ID
+            const templateId = 'YOUR_TEMPLATE_ID'; // Replace with your EmailJS template ID
+            const publicKey = 'YOUR_PUBLIC_KEY';   // Replace with your EmailJS public key
+
+            emailjs.sendForm(serviceId, templateId, form.current, publicKey)
+                .then((result) => {
+                    console.log('Email sent successfully:', result.text);
+                    setIsSubmitted(true);
+                    setFormData({ name: '', email: '', message: '' });
+                    setIsLoading(false);
+
+                    // Reset success message after 5 seconds
+                    setTimeout(() => {
+                        setIsSubmitted(false);
+                    }, 5000);
+                })
+                .catch((error) => {
+                    console.error('Email send failed:', error.text);
+                    setSubmitError('Failed to send message. Please try again or contact directly via email.');
+                    setIsLoading(false);
+                });
         }
     };
 
@@ -76,10 +97,16 @@ const Contact = () => {
                 </header>
 
                 <div className="contact-content">
-                    <form className="contact-form" onSubmit={handleSubmit} noValidate>
+                    <form className="contact-form" ref={form} onSubmit={handleSubmit} noValidate>
                         {isSubmitted && (
                             <div className="form-success">
-                                Thank you for your message! I'll get back to you soon.
+                                ✅ Thank you for your message! I'll get back to you soon.
+                            </div>
+                        )}
+
+                        {submitError && (
+                            <div className="form-error-message">
+                                ❌ {submitError}
                             </div>
                         )}
 
@@ -124,8 +151,12 @@ const Contact = () => {
                             {errors.message && <p className="form-error">{errors.message}</p>}
                         </div>
 
-                        <button type="submit" className="btn btn-primary form-submit">
-                            Send Message
+                        <button
+                            type="submit"
+                            className="btn btn-primary form-submit"
+                            disabled={isLoading}
+                        >
+                            {isLoading ? 'Sending...' : 'Send Message'}
                         </button>
                     </form>
 
@@ -144,7 +175,7 @@ const Contact = () => {
                                 </svg>
                                 isushantkumar2004@gmail.com
                             </a>
-                            <a href="https://www.linkedin.com/in/kumar-sushant07/" className="contact-link" target="_blank" rel="noopener noreferrer">
+                            <a href="https://linkedin.com/in/isushantk" className="contact-link" target="_blank" rel="noopener noreferrer">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                                 </svg>

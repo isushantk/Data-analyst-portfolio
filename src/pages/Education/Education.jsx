@@ -5,46 +5,21 @@ const Education = () => {
         {
             id: 1,
             degree: "Bachelor of Technology",
-            field: "Computer Science & Engineering",
-            institution: "University Name",
-            location: "City, State",
-            year: "2020 - 2024",
-            grade: "8.5 CGPA",
+            field: "Computer Science and Engineering",
+            institution: "National Institute of Technology Karnataka, Surathkal",
+            location: "Surathkal, Karnataka",
+            year: "2021 – 2025",
+            grade: "",
             icon: "🎓",
             highlights: [
-                "Specialized in Data Science and Analytics",
-                "Completed projects in Machine Learning",
-                "Active member of Technical Club"
-            ]
-        },
-        {
-            id: 2,
-            degree: "Class 12th (Senior Secondary)",
-            field: "Science Stream (PCM)",
-            institution: "School Name",
-            location: "City, State",
-            year: "2018 - 2020",
-            grade: "92%",
-            icon: "📚",
-            highlights: [
-                "Physics, Chemistry, Mathematics",
-                "Computer Science as Optional",
-                "School Science Olympiad Participant"
-            ]
-        },
-        {
-            id: 3,
-            degree: "Class 10th (Secondary)",
-            field: "General Education",
-            institution: "School Name",
-            location: "City, State",
-            year: "2017 - 2018",
-            grade: "90%",
-            icon: "📖",
-            highlights: [
-                "Strong foundation in Mathematics",
-                "Excellence in Science subjects",
-                "Active in extracurricular activities"
+                "Computer Networks",
+                "Operating Systems",
+                "Data Structures",
+                "Database Management",
+                "Computer Architecture",
+                "Big Data Analytics",
+                "Machine Learning",
+                "Cloud Computing"
             ]
         }
     ];
@@ -69,7 +44,7 @@ const Education = () => {
                                 <div className="education-content">
                                     <div className="education-meta">
                                         <span className="education-year">{edu.year}</span>
-                                        <span className="education-grade">{edu.grade}</span>
+                                        {edu.grade && <span className="education-grade">{edu.grade}</span>}
                                     </div>
                                     <h2 className="education-degree">{edu.degree}</h2>
                                     <p className="education-field">{edu.field}</p>
@@ -80,11 +55,14 @@ const Education = () => {
                                         <span>{edu.institution}</span>
                                     </div>
                                     <p className="education-location">{edu.location}</p>
-                                    <ul className="education-highlights">
-                                        {edu.highlights.map((highlight, idx) => (
-                                            <li key={idx}>{highlight}</li>
-                                        ))}
-                                    </ul>
+                                    <div className="coursework-section">
+                                        <h4>Relevant Coursework</h4>
+                                        <ul className="education-highlights coursework-list">
+                                            {edu.highlights.map((highlight, idx) => (
+                                                <li key={idx}>{highlight}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         ))}

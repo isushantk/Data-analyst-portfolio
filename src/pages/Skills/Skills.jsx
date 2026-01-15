@@ -3,27 +3,27 @@ import './Skills.css';
 const skillCategories = [
     {
         name: 'Programming & Analytics',
-        skills: ['Python', 'R', 'SQL', 'Pandas', 'NumPy', 'SciPy', 'Scikit-learn', 'Statistics']
+        skills: ['Python', 'Pandas', 'NumPy', 'SQL', 'R']
     },
     {
-        name: 'Data Visualization',
-        skills: ['Tableau', 'Power BI', 'Matplotlib', 'Seaborn', 'Plotly', 'Looker', 'Excel Charts']
+        name: 'Data & Visualization',
+        skills: ['Tableau', 'Power BI', 'Matplotlib', 'Seaborn', 'Plotly']
     },
     {
-        name: 'Databases & Warehousing',
-        skills: ['PostgreSQL', 'MySQL', 'BigQuery', 'Snowflake', 'Redshift', 'MongoDB', 'SQLite']
-    },
-    {
-        name: 'Cloud & Big Data',
-        skills: ['AWS (S3, Athena, Glue)', 'Google Cloud Platform', 'Azure', 'Spark', 'Databricks', 'Airflow']
+        name: 'Databases & Cloud',
+        skills: ['MySQL', 'PostgreSQL', 'MongoDB', 'AWS S3', 'Google BigQuery', 'Azure Data Lake']
     },
     {
         name: 'Tools & Methodologies',
-        skills: ['Git', 'Jupyter Notebooks', 'VS Code', 'A/B Testing', 'ETL Pipelines', 'Agile', 'JIRA']
+        skills: ['Data Cleaning', 'ETL Pipelines', 'Statistical Analysis', 'Forecasting', 'APIs', 'Agile', 'Git/GitHub', 'Data Governance', 'Jira', 'Jupyter Notebooks', 'Excel Advanced']
     },
     {
-        name: 'Business Intelligence',
-        skills: ['KPI Development', 'Dashboard Design', 'Data Storytelling', 'Requirements Gathering', 'Stakeholder Reporting']
+        name: 'Soft Skills',
+        skills: ['Analytical Thinking', 'Problem Solving', 'Communication', 'Collaboration', 'Project Management', 'Stakeholder Collaboration', 'Attention to Detail']
+    },
+    {
+        name: 'Coursework',
+        skills: ['Computer Networks', 'Operating Systems', 'Data Structures', 'Database Management', 'Computer Architecture', 'Big Data Analytics', 'Machine Learning', 'Cloud Computing']
     }
 ];
 

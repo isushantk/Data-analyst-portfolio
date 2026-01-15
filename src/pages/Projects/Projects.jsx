@@ -2,39 +2,30 @@ import './Projects.css';
 
 const projects = [
     {
-        title: 'E-Commerce Customer Segmentation',
-        problem: 'Retail company needed to identify distinct customer segments to personalize marketing campaigns and improve retention.',
-        dataset: '500K+ transactions, 2 years',
-        tech: ['Python', 'Pandas', 'Scikit-learn', 'Tableau'],
-        insights: 'Identified 5 customer segments with distinct behaviors. High-value segment (12% of customers) drove 45% of revenue. Recommendations led to 22% increase in email campaign conversions.',
-        github: 'https://github.com/sushantkumar/customer-segmentation',
+        title: 'Electric Vehicles Market Size Analysis',
+        problem: 'Analyzed the Electric Vehicle market to understand adoption trends, manufacturer dominance, and range distribution patterns.',
+        dataset: '177,866 entries across 17 columns',
+        tech: ['Python', 'Pandas', 'Matplotlib', 'Seaborn', 'NumPy', 'SciPy'],
+        insights: 'Processed and cleaned a large EV dataset handling missing values across columns including VIN, location, model year, make, and electric range. Created visualizations of EV trends, BEV dominance, top Tesla models, and range histograms.',
+        github: 'https://github.com/isushantk',
         demo: null
     },
     {
-        title: 'Sales Forecasting Dashboard',
-        problem: 'Sales team lacked visibility into future revenue projections, making quota planning and resource allocation difficult.',
-        dataset: '3 years historical sales data',
-        tech: ['SQL', 'Python', 'Power BI', 'Time Series Analysis'],
-        insights: 'Built automated forecasting model with 92% accuracy at monthly level. Dashboard reduced planning cycle from 2 weeks to 2 days.',
-        github: 'https://github.com/sushantkumar/sales-forecasting',
-        demo: 'https://app.powerbi.com/demo'
-    },
-    {
-        title: 'Marketing Attribution Analysis',
-        problem: 'Marketing team couldn\'t determine which channels were driving conversions, leading to inefficient ad spend allocation.',
-        dataset: '1M+ user touchpoints',
-        tech: ['SQL', 'BigQuery', 'Python', 'Looker'],
-        insights: 'Multi-touch attribution revealed paid social was undervalued by 35% in last-click model. Reallocation of $200K budget improved ROAS by 18%.',
-        github: 'https://github.com/sushantkumar/attribution-analysis',
+        title: 'YouTube Data Collection and Analysis',
+        problem: 'Built a data pipeline to collect and analyze trending YouTube videos to understand content performance patterns.',
+        dataset: '200+ trending videos via YouTube Data API v3',
+        tech: ['Python', 'YouTube Data API v3', 'Pandas', 'Seaborn', 'Matplotlib'],
+        insights: 'Discovered <5min videos in Music/Gaming categories (42% of trends) achieve highest engagement with 0.85+ views-likes correlation. Built complete ETL pipeline with API pagination, data cleaning (ISO duration parsing), category mapping, and 10+ visualizations revealing optimal 2-8PM upload window.',
+        github: 'https://github.com/isushantk',
         demo: null
     },
     {
-        title: 'Churn Prediction Model',
-        problem: 'SaaS company had high customer churn but couldn\'t identify at-risk accounts until it was too late for intervention.',
-        dataset: '50K customer records',
-        tech: ['Python', 'Pandas', 'XGBoost', 'Jupyter'],
-        insights: 'Model predicted churn with 85% precision, flagging at-risk customers 30 days before cancellation. Enabled proactive outreach saving $150K ARR.',
-        github: 'https://github.com/sushantkumar/churn-prediction',
+        title: 'Creating a Mutual Fund Plan',
+        problem: 'Developed a portfolio optimization tool to help investors make informed decisions about mutual fund investments.',
+        dataset: 'Nifty 50 stock data',
+        tech: ['Python', 'Pandas', 'NumPy', 'Plotly', 'Jupyter Notebook'],
+        insights: 'Built portfolio optimizer analyzing Nifty 50 data; selected 9 stocks via high ROI/low volatility criteria with inverse volatility weighting (NTPC: 28%). Created interactive financial dashboards comparing mutual fund portfolio low-risk 4-13% ROI vs high-growth stocks. Projected 5K monthly SIP growing to ₹8.6L in 10 years using compound interest formula.',
+        github: 'https://github.com/isushantk',
         demo: null
     }
 ];
@@ -45,7 +36,7 @@ const Projects = () => {
             <div className="container">
                 <header className="page-header">
                     <h1>Projects</h1>
-                    <p>Data analysis and visualization projects demonstrating business impact</p>
+                    <p>Data analysis and visualization projects demonstrating analytical skills and business impact</p>
                 </header>
 
                 <div className="projects-grid">

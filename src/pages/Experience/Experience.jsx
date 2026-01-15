@@ -2,40 +2,37 @@ import './Experience.css';
 
 const experiences = [
     {
-        role: 'Senior Data Analyst',
-        company: 'Tech Solutions Inc.',
-        duration: 'Jan 2022 — Present',
+        role: 'Data Analyst Intern',
+        company: 'Manishaas Infratecho Solutions Pvt. Ltd.',
+        location: 'Delhi',
+        duration: 'May 2024 — July 2024',
         bullets: [
-            'Led analytics for a product team of 15, delivering insights that improved user retention by 18%',
-            'Built automated reporting pipelines reducing manual reporting time by 12 hours weekly',
-            'Designed and maintained executive dashboards tracking $50M+ in annual revenue metrics',
-            'Conducted A/B testing analysis for 20+ experiments, directly impacting product roadmap decisions'
+            'Translated business requirements into scalable data and technology solutions by collaborating with stakeholders, applying analytical problem-solving, and supporting strategic and operational decision-making.',
+            'Designed and delivered interactive dashboards and KPI frameworks using Tableau, Power BI, SQL, and Python, enabling clear insight generation, trend analysis, and performance tracking across multi-source datasets.',
+            'Executed analytics delivery using Agile best practices, including sprint-based development, documentation, data governance, quality checks, and stakeholder reviews to ensure reliable, maintainable, and business-aligned solutions.'
         ],
-        tech: ['Python', 'SQL', 'Tableau', 'BigQuery', 'Airflow']
+        tech: ['Tableau', 'Power BI', 'SQL', 'Python', 'Agile']
+    }
+];
+
+const leadershipRoles = [
+    {
+        role: 'Head of Marketing',
+        organization: 'Entrepreneurship Cell',
+        institution: 'National Institute of Technology Karnataka, Surathkal',
+        duration: 'April 2024 — April 2025',
+        bullets: [
+            'Spearheaded marketing campaigns for a national entrepreneurship event, securing ₹9 lakhs in sponsorships through strategic outreach, persuasive brand pitches, and stakeholder engagement.'
+        ]
     },
     {
-        role: 'Data Analyst',
-        company: 'Analytics Corp',
-        duration: 'Jun 2019 — Dec 2021',
+        role: 'Treasurer',
+        organization: 'Association of Computer Engineers',
+        institution: 'National Institute of Technology Karnataka, Surathkal',
+        duration: 'February 2024 — April 2025',
         bullets: [
-            'Developed customer segmentation models that increased marketing campaign ROI by 25%',
-            'Created self-service analytics tools adopted by 50+ non-technical stakeholders',
-            'Optimized SQL queries reducing dashboard load times from 45s to under 5s',
-            'Partnered with engineering to design data warehouse schema for new product lines'
-        ],
-        tech: ['SQL', 'Python', 'Power BI', 'PostgreSQL', 'Excel']
-    },
-    {
-        role: 'Junior Data Analyst',
-        company: 'StartUp Labs',
-        duration: 'Aug 2017 — May 2019',
-        bullets: [
-            'Analyzed user behavior data to identify key drop-off points in the conversion funnel',
-            'Built weekly KPI reports tracking core business metrics for leadership team',
-            'Cleaned and standardized datasets from 5+ data sources for unified reporting',
-            'Assisted in migrating legacy Excel reports to automated Tableau dashboards'
-        ],
-        tech: ['Excel', 'SQL', 'Tableau', 'Google Analytics']
+            'Oversaw budgeting and fund allocation, planned sustainable operations, and secured multi-source funding to support association activities and events.'
+        ]
     }
 ];
 
@@ -54,6 +51,7 @@ const Experience = () => {
                             <div className="experience-header">
                                 <h3 className="experience-role">{exp.role}</h3>
                                 <p className="experience-company">{exp.company}</p>
+                                <p className="experience-location">{exp.location}</p>
                                 <p className="experience-duration">{exp.duration}</p>
                             </div>
                             <ul className="experience-description">
@@ -66,6 +64,30 @@ const Experience = () => {
                                     <span key={techIndex}>{tech}</span>
                                 ))}
                             </div>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Leadership Section */}
+                <header className="page-header" style={{ marginTop: 'var(--space-16)' }}>
+                    <h2>Leadership & Extracurricular</h2>
+                    <p>Campus leadership roles demonstrating execution and collaboration skills</p>
+                </header>
+
+                <div className="experience-timeline">
+                    {leadershipRoles.map((role, index) => (
+                        <div key={index} className="experience-entry leadership-entry">
+                            <div className="experience-header">
+                                <h3 className="experience-role">{role.role}</h3>
+                                <p className="experience-company">{role.organization}</p>
+                                <p className="experience-location">{role.institution}</p>
+                                <p className="experience-duration">{role.duration}</p>
+                            </div>
+                            <ul className="experience-description">
+                                {role.bullets.map((bullet, bulletIndex) => (
+                                    <li key={bulletIndex}>{bullet}</li>
+                                ))}
+                            </ul>
                         </div>
                     ))}
                 </div>

@@ -60,6 +60,15 @@ const Navbar = () => {
                     </li>
                     <li>
                         <NavLink
+                            to="/education"
+                            className={({ isActive }) => `navbar-link ${isActive ? 'active' : ''}`}
+                            onClick={closeMenu}
+                        >
+                            Education
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
                             to="/projects"
                             className={({ isActive }) => `navbar-link ${isActive ? 'active' : ''}`}
                             onClick={closeMenu}

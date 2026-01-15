@@ -14,7 +14,7 @@ const Resume = () => {
                     <div className="resume-actions">
                         <a
                             href={resumeUrl}
-                            download="Sushant_Kumar_Resume.pdf"
+                            download="Sushant_Data_analyst_04.pdf"
                             className="btn btn-primary"
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="btn-icon">
@@ -43,12 +43,12 @@ const Resume = () => {
                     <div className="resume-viewer-wrapper">
                         <div className="resume-viewer">
                             <iframe
-                                src={resumeUrl}
+                                src={ushant_Data_analyst_04.pdf}
                                 title="Resume PDF Viewer"
                                 className="pdf-frame"
                             >
                                 <p>Your browser does not support PDFs.
-                                    <a href={resumeUrl} download>Download the PDF</a>
+                                    <a href={ushant_Data_analyst_04.pdf} download>Download the PDF</a>
                                 </p>
                             </iframe>
                         </div>

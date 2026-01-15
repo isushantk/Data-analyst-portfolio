@@ -7,25 +7,31 @@ const Home = () => {
         <>
             {/* Hero Section */}
             <section className="home-hero">
-                <div className="container home-hero-content">
-                    <div className="hero-profile">
-                        <img src={profileImage} alt="Sushant Kumar" className="profile-image" />
-                    </div>
-                    <h1 className="home-title">Sushant Kumar</h1>
-                    <p className="home-subtitle">Data Analytics Professional</p>
-                    <p className="home-summary">
-                        Data Analytics professional with hands-on experience in transforming complex business
-                        requirements into actionable insights through data-driven solutions. Proficient in
-                        Python, SQL, Tableau, and Power BI, with a strong foundation in data cleaning,
-                        ETL pipelines, statistical analysis, and visualization.
-                    </p>
-                    <div className="home-cta">
-                        <Link to="/projects" className="btn btn-primary">
-                            View My Projects
-                        </Link>
-                        <Link to="/contact" className="btn btn-secondary">
-                            Get in Touch
-                        </Link>
+                <div className="container">
+                    <div className="hero-split">
+                        <div className="hero-content">
+                            <p className="hero-tagline">Data Analyst | Python & SQL | Visualization Expert</p>
+                            <h1 className="home-title">Transforming Data into Actionable Business Insights</h1>
+                            <p className="home-summary">
+                                Hi, I'm Sushant — a B.Tech CSE student at NIT Karnataka with hands-on experience
+                                in data analytics. I specialize in transforming complex business requirements
+                                into actionable insights using Python, SQL, Tableau, and Power BI. With expertise
+                                in data cleaning, ETL pipelines, statistical analysis, and visualization, I deliver
+                                scalable dashboards, KPI frameworks, and forecasting models that drive data-informed
+                                decision making.
+                            </p>
+                            <div className="home-cta">
+                                <Link to="/projects" className="btn btn-primary">
+                                    View Projects
+                                </Link>
+                                <Link to="/contact" className="btn btn-secondary">
+                                    Get in Touch
+                                </Link>
+                            </div>
+                        </div>
+                        <div className="hero-image">
+                            <img src={profileImage} alt="Sushant Kumar" className="profile-image" />
+                        </div>
                     </div>
                 </div>
             </section>

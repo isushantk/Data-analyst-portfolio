@@ -2,7 +2,7 @@ import './Resume.css';
 
 const Resume = () => {
     // Place your resume PDF in the public folder as 'resume.pdf'
-    const resumeUrl = `${import.meta.env.BASE_URL}resume.pdf`;
+    const resumeUrl = `${import.meta.env.BASE_URL}Sushant_Data_analyst_04.pdf`;
 
     return (
         <div className="resume-page">

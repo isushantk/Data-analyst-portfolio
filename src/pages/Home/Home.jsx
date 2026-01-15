@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import './Home.css';
+import profileImage from '../../assets/profile.jpg';
 
 const Home = () => {
     return (
@@ -7,6 +8,9 @@ const Home = () => {
             {/* Hero Section */}
             <section className="home-hero">
                 <div className="container home-hero-content">
+                    <div className="hero-profile">
+                        <img src={profileImage} alt="Sushant Kumar" className="profile-image" />
+                    </div>
                     <h1 className="home-title">Sushant Kumar</h1>
                     <p className="home-subtitle">Data Analytics Professional</p>
                     <p className="home-summary">

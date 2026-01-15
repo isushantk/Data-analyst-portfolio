@@ -1,9 +1,7 @@
-import { useState, useRef } from 'react';
-import emailjs from '@emailjs/browser';
+import { useState } from 'react';
 import './Contact.css';
 
 const Contact = () => {
-    const form = useRef();
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -46,7 +44,6 @@ const Contact = () => {
             ...prev,
             [name]: value
         }));
-        // Clear error when user starts typing
         if (errors[name]) {
             setErrors(prev => ({
                 ...prev,
@@ -55,36 +52,43 @@ const Contact = () => {
         }
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setSubmitError('');
 
         if (validateForm()) {
             setIsLoading(true);
 
-            // EmailJS configuration
-            // You need to replace these with your actual EmailJS credentials
-            const serviceId = 'service_2215s7j';  // Replace with your EmailJS service ID
-            const templateId = 'template_303d8xq'; // Replace with your EmailJS template ID
-            const publicKey = 'NvaixzFZbAykXq0al';   // Replace with your EmailJS public key
+            try {
+                // Using Formspree - Replace YOUR_FORM_ID with your actual form ID from formspree.io
+                const response = await fetch('https://formspree.io/f/xwvvpapz', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        name: formData.name,
+                        email: formData.email,
+                        message: formData.message
+                    })
+                });
 
-            emailjs.sendForm(serviceId, templateId, form.current, publicKey)
-                .then((result) => {
-                    console.log('Email sent successfully:', result.text);
+                if (response.ok) {
                     setIsSubmitted(true);
                     setFormData({ name: '', email: '', message: '' });
-                    setIsLoading(false);
-
-                    // Reset success message after 5 seconds
                     setTimeout(() => {
                         setIsSubmitted(false);
                     }, 5000);
-                })
-                .catch((error) => {
-                    console.error('Email send failed:', error.text);
-                    setSubmitError('Failed to send message. Please try again or contact directly via email.');
-                    setIsLoading(false);
-                });
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                setSubmitError('Failed to send message. Please try again or contact directly via email.');
+            } finally {
+                setIsLoading(false);
+            }
         }
     };
 
@@ -97,7 +101,7 @@ const Contact = () => {
                 </header>
 
                 <div className="contact-content">
-                    <form className="contact-form" ref={form} onSubmit={handleSubmit} noValidate>
+                    <form className="contact-form" onSubmit={handleSubmit} noValidate>
                         {isSubmitted && (
                             <div className="form-success">
                                 ✅ Thank you for your message! I'll get back to you soon.

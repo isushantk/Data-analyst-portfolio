@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://sushantkumar.github.io/data-analyst-portfolio",
+  "homepage": "https://isushantk.github.io/Data-analyst-portfolio/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

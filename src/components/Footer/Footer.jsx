@@ -19,7 +19,7 @@ const Footer = () => {
                         Email
                     </a>
                     <a
-                        href="https://linkedin.com/in/sushantkumar"
+                        href="https://www.linkedin.com/in/kumar-sushant07/"
                         className="footer-link"
                         target="_blank"
                         rel="noopener noreferrer"

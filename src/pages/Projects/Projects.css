@@ -1,0 +1,110 @@
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.project-header {
+    margin-bottom: var(--space-4);
+}
+
+.project-title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--space-2);
+}
+
+.project-problem {
+    color: var(--color-secondary);
+    line-height: var(--line-height-relaxed);
+    margin-bottom: var(--space-4);
+}
+
+.project-meta {
+    margin-bottom: var(--space-4);
+}
+
+.project-meta-item {
+    display: flex;
+    gap: var(--space-2);
+    margin-bottom: var(--space-2);
+    font-size: var(--font-size-sm);
+}
+
+.project-meta-label {
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-primary);
+    min-width: 80px;
+}
+
+.project-meta-value {
+    color: var(--color-secondary);
+}
+
+.project-insights {
+    background-color: var(--color-muted);
+    padding: var(--space-4);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-4);
+}
+
+.project-insights h4 {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--space-2);
+    color: var(--color-primary);
+}
+
+.project-insights p {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-relaxed);
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin-bottom: var(--space-4);
+}
+
+.project-tech span {
+    background-color: var(--color-accent);
+    color: white;
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+}
+
+.project-links {
+    display: flex;
+    gap: var(--space-4);
+    margin-top: auto;
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--color-border);
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+}
+
+.project-link svg {
+    width: 16px;
+    height: 16px;
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}

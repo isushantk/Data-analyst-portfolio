@@ -1,0 +1,111 @@
+.contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    margin-bottom: var(--space-10);
+}
+
+.form-group {
+    margin-bottom: var(--space-6);
+}
+
+.form-label {
+    display: block;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: var(--space-2);
+    color: var(--color-primary);
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--font-size-base);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: var(--color-surface);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-input.error,
+.form-textarea.error {
+    border-color: #dc2626;
+}
+
+.form-textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-error {
+    font-size: var(--font-size-sm);
+    color: #dc2626;
+    margin-top: var(--space-2);
+}
+
+.form-submit {
+    width: 100%;
+}
+
+.form-success {
+    background-color: #ecfdf5;
+    border: 1px solid #10b981;
+    color: #065f46;
+    padding: var(--space-4);
+    border-radius: var(--radius-md);
+    text-align: center;
+    margin-bottom: var(--space-6);
+}
+
+.contact-info {
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--space-8);
+}
+
+.contact-info h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-4);
+    text-align: center;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-8);
+    flex-wrap: wrap;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    color: var(--color-secondary);
+    font-weight: var(--font-weight-medium);
+}
+
+.contact-link:hover {
+    color: var(--color-accent);
+}
+
+.contact-link svg {
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 640px) {
+    .contact-links {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-4);
+    }
+}

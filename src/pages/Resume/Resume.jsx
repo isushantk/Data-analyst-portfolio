@@ -1,8 +1,9 @@
 import './Resume.css';
 
 const Resume = () => {
-    // Place your resume PDF in the public folder as 'resume.pdf'
-    const resumeUrl = `${import.meta.env.BASE_URL}/Users/sushantkumar/.gemini/antigravity/scratch/data-analyst-portfolio/src/assets/Sushant_Data_analyst_04.pdf`;
+    // Google Drive resume URL - converted to preview format for embedding
+    const resumeViewUrl = "https://drive.google.com/file/d/1nYXWn-6rOS9OSyIQD7FpTY8f52dN8N6b/view?usp=sharing";
+    const resumeEmbedUrl = "https://drive.google.com/file/d/1nYXWn-6rOS9OSyIQD7FpTY8f52dN8N6b/preview";
 
     return (
         <div className="resume-page">
@@ -13,8 +14,9 @@ const Resume = () => {
                     <p>View my professional background and qualifications</p>
                     <div className="resume-actions">
                         <a
-                            href={resumeUrl}
-                            download="/Users/sushantkumar/.gemini/antigravity/scratch/data-analyst-portfolio/src/assets/Sushant_Data_analyst_04.pdf"
+                            href={resumeViewUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="btn btn-primary"
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="btn-icon">
@@ -23,7 +25,7 @@ const Resume = () => {
                             Download Resume
                         </a>
                         <a
-                            href={resumeUrl}
+                            href={resumeViewUrl}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="btn btn-secondary"
@@ -43,12 +45,13 @@ const Resume = () => {
                     <div className="resume-viewer-wrapper">
                         <div className="resume-viewer">
                             <iframe
-                                src={resumeUrl}
+                                src={resumeEmbedUrl}
                                 title="Resume PDF Viewer"
                                 className="pdf-frame"
+                                allow="autoplay"
                             >
                                 <p>Your browser does not support PDFs.
-                                    <a href={resumeUrl} download>Download the PDF</a>
+                                    <a href={resumeViewUrl} target="_blank" rel="noopener noreferrer">View the Resume</a>
                                 </p>
                             </iframe>
                         </div>

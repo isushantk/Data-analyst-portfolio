@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import './Home.css';
+import Education from '../../components/Education/Education';
 
 const Home = () => {
     return (
@@ -81,6 +82,9 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+
+            {/* Education Section */}
+            <Education />
         </>
     );
 };

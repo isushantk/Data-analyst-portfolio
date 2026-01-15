@@ -21,6 +21,35 @@ const Education = () => {
                 "Machine Learning",
                 "Cloud Computing"
             ]
+        },
+        {
+            id: 2,
+            degree: "Class 12th (Senior Secondary)",
+            field: "Science Stream (PCM)",
+            institution: "Your School Name",
+            location: "City, State",
+            year: "2019 – 2021",
+            grade: "",
+            icon: "📚",
+            highlights: [
+                "Physics",
+                "Chemistry",
+                "Mathematics"
+            ]
+        },
+        {
+            id: 3,
+            degree: "Class 10th (Secondary)",
+            field: "General Education",
+            institution: "Your School Name",
+            location: "City, State",
+            year: "2019",
+            grade: "",
+            icon: "📖",
+            highlights: [
+                "Strong foundation in Mathematics and Science",
+                "Active in extracurricular activities"
+            ]
         }
     ];
 

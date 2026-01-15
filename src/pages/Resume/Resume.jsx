@@ -43,12 +43,12 @@ const Resume = () => {
                     <div className="resume-viewer-wrapper">
                         <div className="resume-viewer">
                             <iframe
-                                src={ushant_Data_analyst_04.pdf}
+                                src={resumeUrl}
                                 title="Resume PDF Viewer"
                                 className="pdf-frame"
                             >
                                 <p>Your browser does not support PDFs.
-                                    <a href={ushant_Data_analyst_04.pdf} download>Download the PDF</a>
+                                    <a href={resumeUrl} download>Download the PDF</a>
                                 </p>
                             </iframe>
                         </div>

@@ -2,7 +2,7 @@ import './Resume.css';
 
 const Resume = () => {
     // Place your resume PDF in the public folder as 'resume.pdf'
-    const resumeUrl = `${import.meta.env.BASE_URL}/Sushant_Data_analyst_04.pdf`;
+    const resumeUrl = `${import.meta.env.BASE_URL}/Users/sushantkumar/.gemini/antigravity/scratch/data-analyst-portfolio/src/assets/Sushant_Data_analyst_04.pdf`;
 
     return (
         <div className="resume-page">
@@ -14,7 +14,7 @@ const Resume = () => {
                     <div className="resume-actions">
                         <a
                             href={resumeUrl}
-                            download="Sushant_Data_analyst_04.pdf"
+                            download="/Users/sushantkumar/.gemini/antigravity/scratch/data-analyst-portfolio/src/assets/Sushant_Data_analyst_04.pdf"
                             className="btn btn-primary"
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="btn-icon">

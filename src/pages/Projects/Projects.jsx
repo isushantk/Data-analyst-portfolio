@@ -7,7 +7,7 @@ const projects = [
         dataset: '177,866 entries across 17 columns',
         tech: ['Python', 'Pandas', 'Matplotlib', 'Seaborn', 'NumPy', 'SciPy'],
         insights: 'Processed and cleaned a large EV dataset handling missing values across columns including VIN, location, model year, make, and electric range. Created visualizations of EV trends, BEV dominance, top Tesla models, and range histograms.',
-        github: 'https://github.com/isushantk',
+        github: 'https://github.com/isushantk/Electric-Vehicles-Market-Size-Analysis-using-Python',
         demo: null
     },
     {
@@ -16,7 +16,7 @@ const projects = [
         dataset: '200+ trending videos via YouTube Data API v3',
         tech: ['Python', 'YouTube Data API v3', 'Pandas', 'Seaborn', 'Matplotlib'],
         insights: 'Discovered <5min videos in Music/Gaming categories (42% of trends) achieve highest engagement with 0.85+ views-likes correlation. Built complete ETL pipeline with API pagination, data cleaning (ISO duration parsing), category mapping, and 10+ visualizations revealing optimal 2-8PM upload window.',
-        github: 'https://github.com/isushantk',
+        github: 'https://github.com/isushantk/YouTube-Data-Collection-and-Analysis-with-Python',
         demo: null
     },
     {
@@ -25,7 +25,7 @@ const projects = [
         dataset: 'Nifty 50 stock data',
         tech: ['Python', 'Pandas', 'NumPy', 'Plotly', 'Jupyter Notebook'],
         insights: 'Built portfolio optimizer analyzing Nifty 50 data; selected 9 stocks via high ROI/low volatility criteria with inverse volatility weighting (NTPC: 28%). Created interactive financial dashboards comparing mutual fund portfolio low-risk 4-13% ROI vs high-growth stocks. Projected 5K monthly SIP growing to ₹8.6L in 10 years using compound interest formula.',
-        github: 'https://github.com/isushantk',
+        github: 'https://github.com/isushantk/Creating-a-Mutual-Fund-Plan-with-Python',
         demo: null
     }
 ];

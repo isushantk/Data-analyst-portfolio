@@ -5,6 +5,7 @@ import Skills from './pages/Skills/Skills';
 import Experience from './pages/Experience/Experience';
 import Education from './pages/Education/Education';
 import Projects from './pages/Projects/Projects';
+import Resume from './pages/Resume/Resume';
 import Contact from './pages/Contact/Contact';
 import './index.css';
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="experience" element={<Experience />} />
           <Route path="education" element={<Education />} />
           <Route path="projects" element={<Projects />} />
+          <Route path="resume" element={<Resume />} />
           <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>

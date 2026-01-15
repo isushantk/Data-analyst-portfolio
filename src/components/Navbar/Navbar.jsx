@@ -78,6 +78,15 @@ const Navbar = () => {
                     </li>
                     <li>
                         <NavLink
+                            to="/resume"
+                            className={({ isActive }) => `navbar-link ${isActive ? 'active' : ''}`}
+                            onClick={closeMenu}
+                        >
+                            Resume
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
                             to="/contact"
                             className={({ isActive }) => `navbar-link ${isActive ? 'active' : ''}`}
                             onClick={closeMenu}
